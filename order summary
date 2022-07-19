@@ -1,0 +1,215 @@
+ <html>
+    <head1>
+        <style>
+        :root {
+            --pale-blue: hsl(225, 100%, 94%);
+            --bright-blue: hsl(245, 75%, 52%);
+            --very-pale-blue: hsl(225, 100%, 98%);
+            --desaturated-blue: hsl(224, 23%, 55%);
+            --dark-blue: hsl(223, 47%, 23%);
+        }
+        body {
+            font-family: 'Red Hat Display', sans-serif;
+            font-size: 16px;
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            padding: 0px;
+            margin: 0px;
+            background: var(--pale-blue);
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url(https://rvs-order-summary-component.netlify.app/images/pattern-background-desktop.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: top;
+            z-index: -1;
+        }
+        main {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            width: 320px;
+            min-height: 400px;
+            margin: 60px auto;
+            border-radius: 10px;
+            background: white;
+        }
+        .card .card-header {
+            width: 100%;
+            height: 156px;
+            border-radius: 10px 10px 0px 0px;
+        }
+        .card .card-header img {
+            width: 100%;
+            border-radius: 10px 10px 0px 0px;
+        }
+        .card .card-body {
+            width: 100%;
+            height: auto;
+            padding: 25px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .card .card-body .card-title {
+            width: 100%;
+            font-weight: 900;
+            color: var(--dark-blue);
+            text-align: center;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        .card .card-body .card-text {
+            width: 100%;
+            color: var(--desaturated-blue);
+            text-align: center;
+            line-height: 25px;
+            padding: 15px 0px;
+            box-sizing: border-box;
+        }
+        .card .card-body .card-plan {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            column-gap: 15px;
+            background: var(--very-pale-blue);
+            border-radius: 10px;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        .card .card-body .card-plan .card-plan-img {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        .card .card-body .card-plan .card-plan-text {
+            flex-grow: 6;
+            display: flex;
+            flex-direction: column;
+            row-gap: 4px;
+        }
+        .card .card-body .card-plan .card-plan-text .card-plan-title {
+            color: var(--dark-blue);
+            font-weight: 900;
+            font-size: 14px;
+        }
+        .card .card-body .card-plan .card-plan-text .card-plan-price {
+            color: var(--desaturated-blue);
+            font-size: 14px;
+        }
+        .card .card-body .card-plan .card-plan-link {
+            flex-grow: 1;
+        }
+        .card .card-body .card-plan .card-plan-link a {
+            color: var(--bright-blue);
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .card .card-body .card-plan .card-plan-link a:hover {
+            color: #766cf1;
+            text-decoration: none;;
+        }
+        .card .card-body .card-payment-button {
+            padding: 25px 0px 15px;
+            box-sizing: border-box;
+        }
+        .card .card-body .card-payment-button button {
+            width: 100%;
+            height: 50px;
+            border: 0;
+            background: var(--bright-blue);
+            color: white;
+            font-weight: 700;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px 0px hsl(245deg 75% 52% / 44%);
+            cursor: pointer;
+        }
+        .card .card-body .card-payment-button button:hover {
+            background: #766cf1;
+        }
+        .card .card-body .card-cancel-button {
+            padding: 15px 0px;
+            box-sizing: border-box;
+        }
+        .card .card-body .card-cancel-button button {
+            width: 100%;
+            border: 0;
+            background: none;
+            color: var(--desaturated-blue);
+            font-weight: 900;
+            text-align: center;
+            cursor: pointer;
+        }
+        .card .card-body .card-cancel-button button:hover {
+            color: var(--dark-blue);
+        }
+        
+
+        @media (max-width: 375px) {
+            body {
+                height: auto;
+            }
+            body::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                background: url(https://rvs-order-summary-component.netlify.app/images/pattern-background-mobile.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: top;
+                z-index: -1;
+            }
+            
+        }
+        </style>
+    </head>    
+    <main>
+        <div class="card">
+            <div class="card-header">
+                <img src="https://rvs-order-summary-component.netlify.app/images/illustration-hero.svg" alt="">
+            </div>
+            <div class="card-body">
+                <div class="card-title">Order Summary</div>
+              <div class="img">
+                <img src="data:image/jpeg;base64,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"
+                <div class="card-text">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</div>
+                <div class="card-plan">
+                    <div class="card-plan-img"><img src="https://rvs-order-summary-component.netlify.app/images/icon-music.svg" alt=""></div>
+                    <div class="card-plan-text">
+                        <div class="card-plan-title">Annual Plan</div>
+                        <div class="card-plan-price">$99.99/year</div>
+                    </div>
+                    <div class="card-plan-link"><a href="https://nmjyzkkipqcl-html.na.app.codingrooms.com">Change</a></div>
+                </div>
+                <div class="card-payment-button"><a href="https://animiredyharikrishna.w3spaces.com/paymentprocess-1.html
+
+">
+                    <button>Proceed to Payment</button></a>
+                </div>
+                <div class="card-cancel-button"><a href="https://www.w3spaces-preview.com/animiredyharikrishna/cancelordersummary.html">
+                    <button>Cancel Order</button></a>
+                </div>
+            </div>
+        </div>
+    </main>
